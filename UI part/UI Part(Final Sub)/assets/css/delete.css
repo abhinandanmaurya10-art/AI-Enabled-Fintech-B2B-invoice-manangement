@@ -1,0 +1,98 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+.erase {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: 200ms ease-in-out;
+  border: 1px solid black;
+  border-radius: 10px;
+  z-index: 10;
+  background-color: #2a3e4c;
+  width: 30vw;
+  height: 35vh;
+  max-width: 80%;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.erase.active {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.erase-header {
+  padding: 10px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid black;
+  color: #ffffff;
+  font-size: 28px;
+}
+
+.erase-header .title {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.erase-header .close-button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #97a1a9;
+}
+
+.erase-body {
+  padding: 10px 15px;
+  color: #c0c6ca;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+.erase-footer {
+  padding: 15px 15px;
+  border-top: 1px solid black;
+  color: #ffffff;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.erase-footer .button {
+  height: 3rem;
+  width: 5rem;
+  background-color: #2a3e4c;
+  border: 0 px;
+  border-color: #14aff1;
+  border-radius: 10px;
+  margin-right: 20px;
+  color: #ffffff;
+  font-size: 1rem;
+}
+
+.erase-footer .button:hover {
+  background-color: #14aff1;
+}
+
+#overlay2 {
+  position: fixed;
+  opacity: 0;
+  transition: 200ms ease-in-out;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  pointer-events: none;
+}
+
+#overlay2.active {
+  opacity: 1;
+  pointer-events: all;
+}

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+ <title>HighradiusIntern</title>
+ <link rel="stylesheet" href="assets/css/style.css">
+ <link rel="stylesheet" href="assets/css/add.css">
+ <link rel="stylesheet" href="assets/css/edit.css">
+ <link rel="stylesheet" href="assets/css/delete.css">
+ <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+ <script defer src="assets/javascript/add.js"></script>
+ <script defer src="assets/javascript/edit.js"></script>
+ <script defer src="assets/javascript/delete.js"></script>
+ <script defer src="assets/javascript/app.js"></script>
+</head>
+
+<body>
+
+ <header class="mainHeader">
+
+  <div class="header">
+
+   <div class="abcLogo">
+    <img src="assets/images/abc.png" alt="ABC Products">
+   </div>
+   <div class="highradiusLogo">
+    <img src="assets/images/logo.png" alt="">
+   </div>
+  </div>
+ </header>
+
+ <section class="mainSection">
+
+  <div class="sectionHeader">Invoice List</div>
+  <div class="sectionBody">
+
+   <div class="button">
+
+    <button data-modal-target="#modal" type="button" class="addButton">
+     <span class="addButtonImage"><img src="assets/images/Path 18189.png" alt="+"></span>
+     <span class="addButtonText">Add</span>
+    </button>
+
+
+    <div class="modal" id="modal">
+     <div class="modal-header">
+      <div class="title">Add invoice</div>
+      <button data-close-button class="close-button">&times;</button>
+     </div>
+     <div class="modal-body">
+
+      <form id="addInvoiceForm" action="" method="POST">
+       <div class="addInfo">
+        <div class="column1">
+         <div class="info">
+          <label for="custName">Customer Name*</label>
+          <input type="text" name="Customer Name" id="custName" required>
+         </div>
+
+         <div class="info">
+          <label for="custNo">Customer NO.*</label>
+          <input type="number" name="Customer No." id="custNo" required>
+         </div>
+
+         <div class="info">
+          <label for="invNo">Invoice No.*</label>
+          <input type="number" name="Invoice No." id="invNo" required>
+         </div>
+
+         <div class="info">
+          <label for="invAmount">Invoice Amount*</label>
+          <input type="number" name="Invoice Amount" id="invAmount" required>
+         </div>
+        </div>
+
+        <div class="column2">
+         <div class="info">
+          <label for="dueDate">Due Date</label>
+          <input type="date" name="Due Date" id="dueDate" required>
+         </div>
+
+         <div class="info">
+          <label for="notes" style="vertical-align: top;">Notes</label>
+          <textarea name="Notes" id="notes" cols="20" rows="10"></textarea>
+         </div>
+        </div>
+       </div>
+     </div>
+
+     <div class="modal-footer">
+      <div class="footer1">
+       <button type="button" data-close-button class="cancel-button">Cancel</button>
+      </div>
+      <div class="footer2">
+
+       <button type="reset" value="Reset" class="button">Clear</button>
+       <button type="submit" value="Submit" class="button">Submit</button>
+       </form>
+      </div>
+     </div>
+    </div>
+    <div id="overlay"></div>
+
+
+    <button id="openEditModalButton" type="button" class="editButton">
+     <span class="editButtonImage"><img src="assets/images/Path 18191.png" alt="/"></span>
+     <span class="editButtonText">Edit</span>
+    </button>
+   
+
+    <div class="edit" id="edit">
+     <div class="edit-header">
+      <div class="title">Edit Invoice</div>
+      <button data-close-edit-button class="close-button">&times;</button>
+     </div>
+     <div class="edit-body">
+      <form id="editInvoiceForm" action="" method="POST">
+       <div class="eInfo">
+        <div class="editInfo">
+         <label for="editInvAmount">Invoice Amount*</label>
+         <input type="number" name="Invoice Amount" id="editInvAmount" required>
+        </div>
+        <div class="editInfo">
+         <label for="editNotes" style="vertical-align: top;">Notes</label>
+         <textarea name="Notes" id="editNotes" cols="20" rows="10"></textarea>
+        </div>
+       </div>
+     </div>
+     <div class="edit-footer">
+      <div class="footerEdit1">
+       <button type="button" data-close-edit-button class="cancel-button">Cancel</button>
+      </div>
+      <div class="footerEdit2">
+       <button type="reset" value="Reset" class="button">Reset</button>
+       <button type="submit" value="Submit" class="button">Save</button>
+       </form>
+      </div>
+     </div>
+    </div>
+    <div id="overlay1"></div>
+   
+
+
+    <button data-erase-target="#erase" type="button" class="deleteButton">
+     <span class="deleteButtonText">- Delete</span>
+    </button>
+
+
+    <div class="erase" id="erase">
+     <div class="erase-header">
+      <div class="title">Delete Record(s)?</div>
+      <button data-close-erase-button class="close-button">&times;</button>
+     </div>
+     <div class="erase-body">You'll lose your record(s) after this action. We can't recover them once you
+      delete.<br><br>Are you sure you want to <b style="color: red;">permanently delete</b> them?</div>
+     <div class="erase-footer">
+      <button type="button" data-close-erase-button class="button">Cancel</button>
+      <button type="button" id="confirmDeleteButton" class="button">Delete</button>
+     </div>
+    </div>
+    <div id="overlay2"></div>
+
+
+    <form action="#" class="search" onsubmit="return false;">
+     <input id="searchInput" type="text" class="searchInput" placeholder=" Search by Invoice Number">
+     <button type="button" class="searchIcon">
+      <img src="assets/images/search-24px (3).png" alt="search-icon" class="searchIcon">
+     </button>
+    </form>
+
+   </div>
+
+   <div class="tableData">
+    <form id="invoiceTableForm" action="" method="post">
+     <table class="table table-stripped">
+      <thead>
+       <tr class="tableRow">
+        <th class="tableHead">
+         <input type="checkbox" id="selectAllCheckboxes" style="margin-right: 1rem; margin-left: 1.5rem;">
+         <label for="selectAllCheckboxes" class="visuallyhidden">Customer Names</label>
+        </th>
+        <th class="tableHead">Customer #</th>
+        <th class="tableHead">Invoice #</th>
+        <th class="tableHead">Invoice Amount</th>
+        <th class="tableHead">Due Date</th>
+        <th class="tableHead">Predicted Payment Date</th>
+        <th class="tableHead">Notes</th>
+       </tr>
+      </thead>
+
+      <tbody id="myTable">
+
+      </tbody>
+
+     </table>
+    </form>
+   </div>
+   <div class="scrollButton">
+    <div><button class="nextButton">&gt;</button></div>
+    <div><button class="prevButton">&lt;</button>
+    </div>
+   </div>
+ </section>
+
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+</html>

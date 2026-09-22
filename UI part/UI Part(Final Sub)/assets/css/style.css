@@ -1,0 +1,207 @@
+:root {
+  font-size: 16px;
+  background-color: #58687e;
+}
+
+.header {
+  display: flex;
+}
+
+.abcLogo {
+  margin-left: 1.5vw;
+  width: 15vw;
+  height: 5vh;
+}
+
+.highradiusLogo {
+  width: 13vw;
+  height: 5vh;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section {
+  display: flex;
+}
+
+.sectionHeader {
+  display: flex;
+  margin-top: 7vh;
+  margin-left: 1.5vw;
+  width: 180px;
+  height: 40px;
+  font-family: "Ubuntu", sans-serif;
+  color: #ffffff;
+  font-size: 2rem;
+  text-align: left;
+}
+
+.sectionBody {
+  background-color: #273d49cc;
+  margin-top: 5vh;
+  margin-left: 1.5vw;
+  margin-bottom: 2vh;
+  margin-right: 2.5vw;
+  width: 95.5vw;
+  height: 74vh;
+  border-radius: 5px;
+}
+
+.button {
+  float: right;
+}
+
+.addButton {
+  width: 100px;
+  height: 50px;
+  background: #273d49cc 0% 0% no-repeat padding-box;
+  border: 1px solid #97a1a9;
+  border-radius: 10px;
+  margin-top: 30px;
+  opacity: 1;
+}
+
+.addButtonImage {
+  width: 14px;
+  height: 15px;
+  color: #97a1a9;
+  opacity: 1;
+}
+
+.addButtonText {
+  text-align: left;
+  font-size: 22px;
+  font-family: "Ubuntu", sans-serif;
+  letter-spacing: 0px;
+  color: #97a1a9;
+  opacity: 1;
+}
+
+.editButton {
+  width: 100px;
+  height: 50px;
+  background: #273d49cc 0% 0% no-repeat padding-box;
+  border: 1px solid #97a1a9;
+  border-radius: 10px;
+  opacity: 1;
+  margin-left: 15px;
+  margin-top: 30px;
+}
+
+.editButtonImage {
+  width: 20px;
+  height: 22px;
+  color: #97a1a9;
+  opacity: 1;
+}
+
+.editButtonText {
+  text-align: left;
+  font-size: 22px;
+  font-family: "Ubuntu", sans-serif;
+  letter-spacing: 0px;
+  color: #97a1a9;
+  opacity: 1;
+}
+
+.deleteButton {
+  width: 100px;
+  height: 50px;
+  background: #273d49cc 0% 0% no-repeat padding-box;
+  border: 1px solid #97a1a9;
+  border-radius: 10px;
+  opacity: 1;
+  margin-left: 15px;
+  margin-top: 30px;
+}
+.deleteButtonText {
+  text-align: left;
+  font-size: 22px;
+  font-family: "Ubuntu", sans-serif;
+  letter-spacing: 0px;
+  color: #97a1a9;
+  opacity: 1;
+}
+
+.search {
+  width: 340px;
+  height: 48px;
+  background: #283a46;
+  border: 0px;
+  border-radius: 10px;
+  opacity: 1;
+  padding: 16.5px;
+  display: inline;
+  margin-left: 15px;
+  margin-right: 30px;
+  margin-top: 5px;
+}
+
+.searchInput {
+  width: 18vw;
+  height: 5vh;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 18px;
+  color: #97a1a9;
+  background-color: #283a46;
+  border: 0px;
+  border-radius: 10px;
+  padding: 0px;
+}
+
+.searchIcon {
+  width: 2rem;
+  height: 2rem;
+  background-color: #283a46;
+  vertical-align: middle;
+}
+
+.tableData {
+  display: flex;
+  margin-left: 3vw;
+  text-align: left;
+  color: #97a1a9;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 1rem;
+  width: 91vw;
+}
+
+.tableRow {
+}
+
+.tableHead {
+  padding-top: 3vh;
+  padding-right: 4vw;
+}
+
+.scrollButton {
+  display: flex;
+}
+
+.nextButton {
+  position: fixed;
+  background-color: #39495e;
+  color: #97a1a9;
+  font-size: 2rem;
+  width: 3.5rem;
+  height: 3.5rem;
+  border: 0px;
+  border-radius: 2.75rem;
+  text-align: center;
+  margin-top: 16.5vh;
+  margin-left: 91vw;
+}
+
+.prevButton {
+  position: fixed;
+  background-color: #39495e;
+  color: #97a1a9;
+  font-size: 2rem;
+  width: 3.5rem;
+  height: 3.5rem;
+  border: 0px;
+  border-radius: 2.75rem;
+  text-align: center;
+  margin-top: 16.5vh;
+  margin-left: 0.5vw;
+}
